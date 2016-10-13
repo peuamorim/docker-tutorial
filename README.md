@@ -1,9 +1,9 @@
-## Hello world
+## APACHE + PHP
 
-1. Instale o Docker. As instruções podem ser encontradas em https://docs.docker.com/engine/installation/
-2. Execute o seguinte comando abaixo:
+1. Execute o seguinte comando:
 
 ```bash
-sudo docker run httpd:2.4 -p 1000:80
+sudo docker run -p 1000:80 --name my-apache-php-app -v <seu-projeto-php>:/var/www/html php:7.0-apache
 ```
 3. Abra seu navegador e digite http://localhost:1000
+4. Pronto, o container do Apache estará rodando sua aplicação PHP ;)
