@@ -1,22 +1,31 @@
-## docker-compose
+## Custom packages
 
-1. Crie um arquivo chamado docker-compose.yml
-2. Insira o seguinte conteúdo no final do arquivo:
+Se seu projeto possui necessidades especiais, provavelmente você não irá uma imagem pronta no Docker Hub. Por conta disso, você terá que criar uma imagem customizada. O legal é que você pode partir de uma imagem base do Docker Hub.
+
+Para criar imagens customizadas, basta vocẽ criar um arquivo chamado Dockerfile e "programar" sua infra dentro dele.
+
+1. Crie um diretório chamado apache-php
+2. Dentro de apache-php/ crie um arquivo chamado Dockerfile
+3. Dentro de Dockerfile, coloque os seguintes comandos:
+
+´´´bash
+FROM php:7.0-apache
+RUN apt-get upgrade
+RUN apt-get update
+RUN apt-get install -y wkhtmltopdf xvfb
+ADD https://phar.phpunit.de/phpunit.phar /usr/local/bin/phpunit
+RUN chmod +x /usr/local/bin/phpunit
+´´´
+4. Modifique o docker-compose.yml para ele utilizar o Dockfile em vez da imagem do Docker Hub.
 
 ```bash
-tutorial-phpmyadmin:
-  image: phpmyadmin/phpmyadmin
-  ports:
-    - "2000:80"
-  depends_on:
-    - tutorial-db
-  links:
-    - "tutorial-db:db"
+version: '2'
+services:
+  tutorial-php-apache:
+    build: apache-php/. ## essa linha foi modificada
 ```
-4. Execute o comando abaixo:
+5. Execute o comando abaixo:
 
 ```bash
-sudo docker-compose up
+sudo docker-compose build && sudo docker-compose up
 ```
-
-Prontinho. O docker-compose irá rodar os 3 containers. Para acessar o phpmyadmin, basta acessar http://localhost:2000 em seu browser.

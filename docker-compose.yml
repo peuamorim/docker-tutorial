@@ -1,7 +1,7 @@
 version: '2'
 services:
   tutorial-php-apache:
-    image: php:7.0-apache
+    build: apache-php/.
     ports:
       - "1000:80"
     depends_on:
