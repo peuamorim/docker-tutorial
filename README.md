@@ -8,14 +8,14 @@ Para criar imagens customizadas, basta vocẽ criar um arquivo chamado Dockerfil
 2. Dentro de apache-php/ crie um arquivo chamado Dockerfile
 3. Dentro de Dockerfile, coloque os seguintes comandos:
 
-´´´bash
+```bash
 FROM php:7.0-apache
 RUN apt-get upgrade
 RUN apt-get update
 RUN apt-get install -y wkhtmltopdf xvfb
 ADD https://phar.phpunit.de/phpunit.phar /usr/local/bin/phpunit
 RUN chmod +x /usr/local/bin/phpunit
-´´´
+```
 4. Modifique o docker-compose.yml para ele utilizar o Dockfile em vez da imagem do Docker Hub.
 
 ```bash
