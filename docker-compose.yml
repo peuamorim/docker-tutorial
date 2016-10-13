@@ -1,0 +1,13 @@
+version: '2'
+services:
+  tutorial-php-apache:
+    image: php:7.0-apache
+    ports:
+      - "1000:80"
+    depends_on:
+      - tutorial-db
+  tutorial-db:
+    image: mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+

@@ -1,9 +1,27 @@
-## Hello world
+## docker-compose
 
-1. Instale o Docker. As instruções podem ser encontradas em https://docs.docker.com/engine/installation/
-2. Execute o seguinte comando abaixo:
+1. Instale o docker-compose. As instruções podem ser encontradas em https://docs.docker.com/compose/install/.
+2. Crie um arquivo chamado docker-compose.yml
+3. Insira o seguinte conteúdo no arquivo:
 
 ```bash
-sudo docker run httpd:2.4 -p 1000:80
+version: '2'
+services:
+  tutorial-php-apache:
+    image: php:7.0-apache
+    ports:
+      - "1000:80"
+    depends_on:
+      - tutorial-db
+  tutorial-db:
+    image: mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
 ```
-3. Abra seu navegador e digite http://localhost:1000
+4. Execute o comando abaixo:
+
+```bash
+sudo docker-compose up
+```
+
+Prontinho. O docker-compose irá rodar os 2 containers.
