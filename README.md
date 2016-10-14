@@ -9,7 +9,19 @@
 http://www.jayway.com/wp-content/uploads/2015/03/vm-vs-docker.png
 ```
 
+### O que aprenderei com esse tutorial?
+
+Você aprenderá do "Hello World" até a criação de um ambiente para desenvolvimento. Aplicando isso em sua empresa, você padronizará os ambientes da aplicações, e facilitará o onboarding de novos colaboradores.
+
+### Quero ajudar nesse tutorial, você tem sugestões sobre o que devo abordar?
+
+- Deploy utilizando o Docker. Padronizar os ambientes de dev, staging e production
+- Balanceamento de carga
+- Continuous Integration
+
+
+
 ### Author
-Ernesto Barros Amorim <ernesto.amorim@gmail>
+Ernesto Barros Amorim (ernesto.amorim@gmail)
 
 
