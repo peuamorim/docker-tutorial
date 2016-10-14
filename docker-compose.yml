@@ -4,6 +4,8 @@ services:
     build: server/.
     ports:
       - "80:80"
+    volumes:
+      - ..:/var/www/html/
     depends_on:
       - database
   database:
