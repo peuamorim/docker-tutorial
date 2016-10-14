@@ -1,21 +1,13 @@
 version: '2'
 services:
-  tutorial-php-apache:
-    build: apache-php/.
+  server:
+    build: server/.
     ports:
-      - "1000:80"
+      - "80:80"
     depends_on:
-      - tutorial-db
-  tutorial-db:
+      - database
+  database:
     image: mysql
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
-  tutorial-phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - "2000:80"
-    depends_on:
-      - tutorial-db
-    links:
-      - "tutorial-db:db":
 
