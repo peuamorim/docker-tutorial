@@ -1,31 +1,18 @@
-## Custom packages
+## Utilizando o docker-compose
 
-Se seu projeto possui necessidades especiais, provavelmente você não irá uma imagem pronta no Docker Hub. Por conta disso, você terá que criar uma imagem customizada. O legal é que você pode partir de uma imagem base do Docker Hub.
+Vimos até então como criar um ambiente simples utilizando Docker. 
 
-Para criar imagens customizadas, basta vocẽ criar um arquivo chamado Dockerfile e "programar" sua infra dentro dele.
+Criamos um container de PHP + Apache e outro de MySQL. Vimos como linkar estes 2 containers. Tivemos também que criar um Dockerfile do servidor, pois a imagem pura não provia conexão do PHP com o Mysql.
 
-1. Crie um diretório chamado apache-php
-2. Dentro de apache-php/ crie um arquivo chamado Dockerfile
-3. Dentro de Dockerfile, coloque os seguintes comandos:
+Para realizar tudo isso, tivemos que executar alguns comandos com alguns parâmetros. Existe uma maneira de simplificar isso. Essa maneira é o docker-compose.
 
-```bash
-FROM php:7.0-apache
-RUN apt-get upgrade
-RUN apt-get update
-RUN apt-get install -y wkhtmltopdf xvfb
-ADD https://phar.phpunit.de/phpunit.phar /usr/local/bin/phpunit
-RUN chmod +x /usr/local/bin/phpunit
-```
-4. Modifique o docker-compose.yml para ele utilizar o Dockfile em vez da imagem do Docker Hub.
+O docker-compose recebe como entrada um arquivo descritivo, e realiza toda a orquestração entre os containers.
 
-```bash
-version: '2'
-services:
-  tutorial-php-apache:
-    build: apache-php/. ## essa linha foi modificada
-```
-5. Execute o comando abaixo:
+Essa etapa consiste em fazer o docker-compose.yml do ambiente que criamos até agora. Caso você tenha memória curta, segue abaixo a descrição:
 
-```bash
-sudo docker-compose build && sudo docker-compose up
-```
+1. Criar container do MySQL, com senha de root vazia;
+2. Criar container do apache-php a partir do Dockerfile que criamos anteriormente
+3. Linkar o apache-php com o MySQL
+4. Testar. Para subir os containers, executar sudo docker-compose up
+
+Pra facilitar sua vida, coloquei o Dockerfile nesse branch. Coloquei o docker-compose-yml também, caso deseje dar uma pescadinha.
