@@ -16,10 +16,11 @@ Você aprenderá do "Hello World" até a criação de um ambiente para desenvolv
 ### Quero ajudar nesse tutorial, você tem sugestões sobre o que devo abordar?
 
 - Deploy utilizando o Docker. Padronizar os ambientes de dev, staging e production
-- Balanceamento de carga
 - Continuous Integration
 
+### Como navego nesse tutorial?
 
+A navegação é feita por branch. Começa do step-01 ;)
 
 ### Author
 Ernesto Barros Amorim (ernesto.amorim@gmail)
