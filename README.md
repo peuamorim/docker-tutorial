@@ -1,9 +1,19 @@
-## APACHE + PHP
+## Rodando um container com Apache + PHP
 
-1. Execute o seguinte comando:
+Se você executou um comando parecido esse abaixo, está de parabéns novamente. Para checar se ocorreu tudo certo, dê um refresh em http://localhost e veja se o novo HTML é exibido.
 
 ```bash
-sudo docker run -p 1000:80 --name my-apache-php-app -v <seu-projeto-php>:/var/www/html php:7.0-apache
+sudo docker run -p 80:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
 ```
-3. Abra seu navegador e digite http://localhost:1000
-4. Pronto, o container do Apache estará rodando sua aplicação PHP ;)
+
+Bala, vamos seguir, pois ninguém mais programa em HTML estático. 
+
+- Vamos melhorar nosso exemplo? Tipo, adicionar uma linguagem de scripting!
+- Vamos nessa, que tal Python?
+- Mané Python, vamos de PHP!
+
+A comunidade é nossa amiga, e deve ter uma imagem pronta com Apache + PHP no Docker Hub. Vá lá, e escolha uma. Se estiver com preguiça, pode usar o php:7.0-apache mesmo ;)
+
+Transforme seu index.html em um index.php, e coloque algum código dentro. Se preferir, tem um index.php fresquinho nesse branch.
+
+Até o próximo branch ;)
