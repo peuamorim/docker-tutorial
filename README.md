@@ -13,6 +13,10 @@ Essa etapa consiste em fazer o docker-compose.yml do ambiente que criamos até a
 1. Criar container do MySQL, com senha de root vazia;
 2. Criar container do apache-php a partir do Dockerfile que criamos anteriormente
 3. Linkar o apache-php com o MySQL
-4. Testar. Para subir os containers, executar sudo docker-compose up
+4. Testar. Para subir os containers, execute o comando abaixo:
+
+```bash
+sudo docker-compose up
+```
 
 Pra facilitar sua vida, coloquei o Dockerfile nesse branch. Coloquei o docker-compose-yml também, caso deseje dar uma pescadinha.
