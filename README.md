@@ -1,9 +1,10 @@
-## Hello world
+## Hello world de verdade
 
-1. Instale o Docker. As instruções podem ser encontradas em https://docs.docker.com/engine/installation/
-2. Execute o seguinte comando abaixo:
+Se você executou o comando abaixo no step-01, você está de parabéns. Confira se tudo deu certo acessando http://localhost e vendo se aparece "It Works".
 
 ```bash
-sudo docker run httpd:2.4 -p 1000:80
+- sudo docker run -p 80:80 httpd:2.4
 ```
-3. Abra seu navegador e digite http://localhost:1000
+Bacana, você rodou seu primeiro container. Mas espera aí, para que vai servir esse container? Do jeito que está, ele não serve para nada! Qual tal exibirmos um HTML seu nele? 
+
+Se estiver com preguiça de criar um html, pode usar o super HTML que está nesse branch ;)
