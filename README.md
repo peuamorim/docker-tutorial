@@ -1,9 +1,4 @@
 ## Hello world
 
-1. Instale o Docker. As instruções podem ser encontradas em https://docs.docker.com/engine/installation/
-2. Execute o seguinte comando abaixo:
+E aí, que tal você rodar seu primeiro container? Sugiro FORTEMENTE(tipo, com muita força mesmo) usar a imagem httpd:2.4, caso contrário, você irã quebrar esse tutorial. Outra dica é olhar para que serve o parâmetro -p no docker run...
 
-```bash
-sudo docker run httpd:2.4 -p 1000:80
-```
-3. Abra seu navegador e digite http://localhost:1000
