@@ -9,7 +9,8 @@ Vamos aprender como criar uma imagem pŕopria com esse package instalado. Resumo
 1. Criar um Dockerfile. Esse Dockerfile irá tomar como base a imagem php:7.0-apache, e irá adicionar o pacote mysql-client e pdo_mysql. A instruções de como fazer isso podem ser encontradas no DockerHub do projeto. As instruções de sintaxe do Dockerfile podem ser encontradas em https://www.digitalocean.com/community/tutorials/docker-explained-using-dockerfiles-to-automate-building-of-images. Nesse exemplos, usaremos apenas FROM e RUN
 2. Fazer a build desse Dockerfile. Olhar documentação de como fazer ;)
 3. Criar um container a partir da imagem gerada e linkar com o container do Banco de Dados;
-4. Criar um script PHP que se conecta ao banco. Se tudo ocorrer bem, mostrar "CONECTOU", caso contrário, "DEU RUIM"
+4. Modificar o index.php para que ele se conecte ao banco. Se tudo ocorrer bem, mostrar "CONECTOU", caso contrário, "DEU RUIM"
+5. Testar ;)
 
 O Dockerfile a ser gerado e o script PHP estão nesse branch. Pode dar uma pescadinha, caso tenha dúvidas ;)
 
