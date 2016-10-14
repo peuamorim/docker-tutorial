@@ -14,4 +14,4 @@ Vamos aprender como criar uma imagem pŕopria com esse package instalado. Resumo
 
 O Dockerfile a ser gerado e o script PHP estão nesse branch. Pode dar uma pescadinha, caso tenha dúvidas ;)
 
-Até o próximo step!
+Até o próximo step, onde aprenderemos como utilizar o docker-compose.yml
