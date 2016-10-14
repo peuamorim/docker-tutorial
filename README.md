@@ -1,6 +1,8 @@
 # Docker Tutorial
 
-Ernesto Barros Amorim
-Agilize Contabilidade Online
+
+
+### Author
+Ernesto Barros Amorim <ernesto.amorim@gmail>
 
 
