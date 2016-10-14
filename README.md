@@ -7,4 +7,6 @@ Se você executou o comando abaixo no step-01, você está de parabéns. Confira
 ```
 Bacana, você rodou seu primeiro container. Mas espera aí, para que vai servir esse container? Do jeito que está, ele não serve para nada! Qual tal exibirmos um HTML seu nele? 
 
+A maneira mais rápida de fazer isso, é usando a diretiva -v no docker run. Leia a documento, e veja como funciona.
+
 Se estiver com preguiça de criar um html, pode usar o super HTML que está nesse branch ;)
