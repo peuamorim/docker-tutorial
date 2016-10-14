@@ -17,5 +17,5 @@ sudo docker exec -it <nome_do_container> bash
 O que terá que ser feito é o seguinte:
 
 1. Criar um container de banco de dados Mysql. Existe imagem para tal no Docker Hub. O password de root será vazio. Na documentação mostra como se faz isso;
-2. Criar o container do apache-php que vinhámos criando e linkar ele com o Mysql;
-3. Testaremos o acesso ao Mysql via terminal do container do PHP, utilizando o mysql no console. Não testaremos via aplicação PHP pois o pdo_mysql não estã instalado. Vamos aprender como faz isso mais pra frente.
+2. Criar o container do apache-php que vinhámos criando e linkar ele com o Mysql. Isso é feito através da diretiva --link no docker run;
+3. Testaremos o acesso ao Mysql através do terminal do container do PHP, utilizando o mysql no console. Não testaremos via aplicação PHP pois o pdo_mysql não estã instalado. Vamos aprender como faz isso mais pra frente.
