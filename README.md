@@ -8,6 +8,8 @@ sudo docker ps
 
 ## inicia um bash
 sudo docker exec -it <nome_do_container> bash
+
+## O docker gera names aleatórios para os containers, caso você não tenha especificado um. No momento da escrita desse turial, o name gerado foi Heisenberg. RiP, Mr. Whitei!
 ```
 
 - Beleza. Vamos avançar um pouco mais. Que tal adicionarmos um banco de dados;
