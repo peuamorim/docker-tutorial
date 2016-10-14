@@ -1,22 +1,17 @@
-## Utilizando o docker-compose
+## Escrevendo uma aplicação PHP do zero
 
-Vimos até então como criar um ambiente simples utilizando Docker. 
+Como você supostamente se tornou um Jedi do Docker, vamos escrever uma aplicação em PHP do zero. Segue a especificação:
 
-Criamos um container de PHP + Apache e outro de MySQL. Vimos como linkar estes 2 containers. Tivemos também que criar um Dockerfile do servidor, pois a imagem pura não provia conexão do PHP com o Mysql.
+1. Utilizaremos o framework Neos Flow. Não é Slim, não é Falcon, n é Laravel, não é Cake, não é Zend, não é PHP na marreta, não é Python, é Neos Flow
+2. A aplicação será um wrapper do Giphy. O usuário vai chamar http://localhost/giphy?key='bird', e irá aparecer uma página com um monte de passarinhos. Robei essa ideia do PHPeste, onde um cara com voz de Darth Vader fez algo parecido, com o Zend Expressive
+3. Para cada chamada. vamos salvar no banco a string consultada e a data da consulta (criatividade mandou lembraça, isso aqui é desculpa para utilizar o banco na consulta)
+4. Disponibilizar o PhpMyAdmin, para visualização de dados no banco
 
-Para realizar tudo isso, tivemos que executar alguns comandos com alguns parâmetros. Existe uma maneira de simplificar isso. Essa maneira é o docker-compose.
+Dicas de como prosseguir:
 
-O docker-compose recebe como entrada um arquivo descritivo, e realiza toda a orquestração entre os containers.
+1. Baixe o framework. A página dele é https://flow.neos.io/. A instalação padrão dele requer composer. Composer requer PHP. Pô, não vamos instalar PHP na máquina, né? rs. Você pode rodar o comando via container do composer. Dê uma olhada em https://hub.docker.com/r/composer/composer/.
+2. Tente rodar o Hello World do framework aos poucos. Esse framework precisa do rewrite, headers, pdo_mysq, overrides via htaccess, etc
+3. A API de teste do Giphy é bem pública. Pode ser encontrada em https://github.com/Giphy/GiphyAPI
+4. Crie uma pasta para guardar as srcs do docker
 
-Essa etapa consiste em fazer o docker-compose.yml do ambiente que criamos até agora. Caso você tenha memória curta, segue abaixo a descrição:
-
-1. Criar container do MySQL, com senha de root vazia;
-2. Criar container do apache-php a partir do Dockerfile que criamos anteriormente
-3. Linkar o apache-php com o MySQL
-4. Testar. Para subir os containers, execute o comando abaixo:
-
-```bash
-sudo docker-compose up
-```
-
-Pra facilitar sua vida, coloquei o Dockerfile nesse branch. Coloquei o docker-compose-yml também, caso deseje dar uma pescadinha.
+Qualquer dúvida, consulte o sourc code neste branch!
