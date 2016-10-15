@@ -17,3 +17,5 @@ Temos também que nos habituar com alguns comandos:
 8. docker-compose up - Roda os containers descritos em um arquivo de configuração
 
 Instalou tudo? Inicie seu primeiro container agora mesmo. Rode a imagem httpd:2.4. É muito fácil, só usar o comando 1 da listagem acima!
+
+Te aguardo no step-02
